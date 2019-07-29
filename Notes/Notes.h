@@ -1,11 +1,12 @@
 #pragma once
 #include "Date.h"
 #include <vector>
-
+#include <algorithm>
 
 struct Notes
 {
 	vector<Date> dates;
+
 	Notes()
 	{
 		
@@ -16,7 +17,7 @@ struct Notes
 	}
 	void print(int day, int month, int year)
 	{
-		printf("%.2d/%.2d/%d events: \n", day, month, year);
+		printf("Lvents for %.2d/%.2d/%d: \n", day, month, year);
 		for (auto date : dates)
 			if (date.day == day && date.month == month && date.year == year)
 				date.print();

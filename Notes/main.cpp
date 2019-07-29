@@ -11,7 +11,9 @@ void handleChoice(string choice);
 Notes notes;
 
 int main()
-{	
+{
+	vector<Date> dates;
+	sort(dates.begin(), dates.end());
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -22,8 +24,9 @@ int main()
 		handleChoice(choice);
 		printf("EXIT - Выход из программы\n ADD - Добавить событие\n PRINT - Распечатать все события для данной даты\n EDIT - Редактировать события для данной даты\n DELETE - Удалить событие для данной даты\n");
 		cin >> choice;
+		system("cls");
 	}
-	system("pause");
+	//system("pause");
 	return 0;
 }
 

@@ -38,4 +38,13 @@ struct Date
 	{
 		printf("%.2d/%.2d/%d - %s.\n", day, month, year, event.c_str());
 	}
+	bool operator>(Date &second)
+	{
+		return (year > second.year);
+	}
+
+	bool operator<(Date &second)
+	{
+		return (year < second.year);
+	}
 };
